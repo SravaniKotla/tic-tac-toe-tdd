@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
-import Game from './components/game';
+import Game from './components/game/Game';
 
 describe('App Component',() => {
     let wrapper;
