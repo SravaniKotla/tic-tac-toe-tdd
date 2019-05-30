@@ -7,6 +7,9 @@ describe('Board Component', () => {
   let wrapper;
   beforeEach(() => wrapper = shallow(<Board />));
 
+  //snapshot testing
+  it('should render correctly', () => expect(wrapper).toMatchSnapshot());
+
   it('should render a <div className="board"/>', () => {
     expect(wrapper.find('div.board').length).toEqual(1);
   });
