@@ -6,6 +6,8 @@ import Game from './components/game/Game';
 describe('App Component',() => {
     let wrapper;
     beforeEach(() => wrapper = shallow(<App />)); //executes before each test case
+    //snapshot testing
+    it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 
     it('should render a <div />', () => {
         expect(wrapper.find('div').length).toEqual(1);
