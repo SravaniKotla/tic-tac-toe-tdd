@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
-import { isTSAnyKeyword, exportAllDeclaration } from '@babel/types';
 
 describe('App Component',() => {
     it('should render a <div />', () => {
