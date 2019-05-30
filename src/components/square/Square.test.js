@@ -6,8 +6,8 @@ describe('Square Component', () => {
   let wrapper;
   beforeEach(() => wrapper = shallow(<Square />));
 
-  it('should render a <div />', () => {
-    expect(wrapper.find('div').length).toEqual(1);
+  it('should render a button', () => {
+    expect(wrapper.find('button.square').length).toEqual(1);
   });
 
 });
