@@ -1,10 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import Game from './components/game';
 
 describe('App Component',() => {
+    let wrapper;
+    beforeEach(() => wrapper = shallow(<App />)); //executes before each test case
+
     it('should render a <div />', () => {
-        const wrapper = shallow(<App />);
         expect(wrapper.find('div').length).toEqual(1);
     });
+
+    it('should render the Game Component', () => {
+        expect(wrapper.containsMatchingElement(<Game />)).toEqual(true);
+      });
 });
