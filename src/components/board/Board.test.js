@@ -23,3 +23,15 @@ describe('Board Component', () => {
   });
 
 });
+
+describe("Board Component props", () => {
+  
+  it('calls onClick event on click of a board sqaure', () => {
+    let squares = Array(9).fill(null);
+    const onClick = jest.fn();
+    let wrapper = mount(<Board squares={squares} onClick={onClick} />);
+    wrapper.find('button.square').first().simulate('click');
+    expect(onClick).toBeCalledWith(0);
+});
+
+});
