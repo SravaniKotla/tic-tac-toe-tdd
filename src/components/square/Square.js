@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Square extends Component {
-    render() {
-        return (
-            <button className="square">
-            </button>
-        )
-    }
-}
-
-export default Square;
+const Square = (props) => {
+    return (
+      <button className="square" onClick={props.onClick}>
+        
+      </button>
+    );
+  }
+  Square.propTypes = { 
+    onClick: PropTypes.func,
+    value: PropTypes.string
+  };
+  export default Square;
