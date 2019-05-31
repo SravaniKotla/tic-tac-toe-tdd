@@ -1,33 +1,85 @@
-.App {
-  text-align: center;
+@media only screen and (min-width: 600px) {
+  .game{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  }
+  .game-board{
+    display:flex;
+    flex-direction:column;
+    height: 100vh!important;
+    width: 50%;
+  }
+  .game-info{
+    display:flex;
+    flex-direction:column;
+    height: 100vh!important;
+    width: 50%;
+  }
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.board-row{
+  display:flex;
+  flex-direction:inline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.square{
+  border: 1px outset black;
+  background-color: lightBlue;
+  height:60px;
+  width:60px;
+  cursor:pointer;
+  font-size: 3em;
+   
+}
+
+.square:focus{
+  outline: 0;
+}
+
+ul{
+  list-style: none;
+  margin: 0px!important;
+  padding: 0px!important;
+}
+
+.status{
+  font-size: 2em;
+  background-color: black;
+  padding: 10px 15px;
   color: white;
 }
+.game-board{
+  height: 40vh;
+  background-color:black!important; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, rgb(46, 46, 46), rgb(158, 158, 158)); /* Standard syntax (must be last) */
+}
+.game-info{
+  height: 60vh;
+  text-align: center;
+}
+.moves-button{
+  width: 80%;
+  padding: 0px!important;
+  margin: 0px!important;
 
-.App-link {
-  color: #61dafb;
+}
+.winner{
+  background-color: rgb(18, 175, 84);
+  color: white;
+}
+.tie{
+  color: rgb(252, 248, 27);
+  font: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.newGame{
+  background-color: rgb(19, 108, 190);
+  color: white;
+  font-size: 1.5em;
+  margin: 0px!important;
+}
+.board{
+  margin: auto!important;
+  text-align: center!important;
 }
