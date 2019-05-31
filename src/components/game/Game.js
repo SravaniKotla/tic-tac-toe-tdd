@@ -5,8 +5,17 @@ class Game extends Component {
     render() {
         return (
             <div className="game">
-                <Board />
-            </div>
+        <div className="game-board">
+
+          <Board
+          />
+          
+        </div>
+        <div className="game-info">
+          <div className="status"></div>
+          <ul className="moves"></ul>
+        </div>
+      </div>
         )
     }
 }
