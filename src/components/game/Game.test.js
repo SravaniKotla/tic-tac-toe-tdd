@@ -10,8 +10,15 @@ describe('Game Component', () => {
   //snapshot testing
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 
-  it('should render a <div />', () => {
-    expect(wrapper.find('div').length).toEqual(1);
+  it('should render 4 div components ', () => {
+    expect(wrapper.find('div.game').length).toEqual(1);
+    expect(wrapper.find('div.game-board').length).toEqual(1);
+    expect(wrapper.find('div.game-info').length).toEqual(1);
+    expect(wrapper.find('div.status').length).toEqual(1);
+  });
+
+  it('should render ul component ', () => {
+    expect(wrapper.find('ul.moves').length).toEqual(1);
   });
 
   it('should render the Board Component', () => {
