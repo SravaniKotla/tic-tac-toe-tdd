@@ -13,7 +13,7 @@ class Game extends Component {
         </div>
         <div className="game-info">
           <div className="status"></div>
-          <ul className="moves"></ul>
+          <ul className="moves">{}</ul>
         </div>
       </div>
         )

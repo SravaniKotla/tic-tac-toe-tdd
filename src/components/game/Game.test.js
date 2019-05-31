@@ -25,4 +25,14 @@ describe('Game Component', () => {
     expect(wrapper.containsMatchingElement(<Board />)).toEqual(true);
   });
 
+  it('should render the Board Component', () => {
+    expect(wrapper.containsAllMatchingElements([
+      <Board
+        squares={wrapper.instance().current.squares}
+        onClick={jest.fn()}
+      />
+    ])).toEqual(true);
+  });
+});
+
 });
