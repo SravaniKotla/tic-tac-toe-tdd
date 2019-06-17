@@ -22,11 +22,17 @@ describe('Game Component', () => {
   });
 
   it('should render the Board Component', () => {
-    expect(wrapper.containsMatchingElement(
-    <Board
-      />
+    let squares = Array(9).fill(null);
+    expect(wrapper.containsMatchingElement(<Board squares={squares}/>
     )).toEqual(true);
+  });
 
+  it('calls onClick event on click of a board sqaure', () => {
+    let squares = Array(9).fill(null);
+    const onClick = jest.fn(); //mock function
+    let wrapper = mount(<Board squares={squares} onClick={onClick} />);
+    wrapper.find('button.square').first().simulate('click');
+    expect(onClick).toBeCalledWith(0);
   });
 
   it('renders game status correctly', () => {
